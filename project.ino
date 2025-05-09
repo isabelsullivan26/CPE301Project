@@ -9,8 +9,8 @@
 
 
 //VENTS
-#define VENT_LEFT 15
-#define VENT_RIGHT 16
+#define VENT_LEFT 22
+#define VENT_RIGHT 23
 
 //UART
  #define RDA 0x80 // receives data
