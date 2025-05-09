@@ -1,5 +1,5 @@
 //CPE301 Final Project
-
+//Isabel Sullivan, Ashton Hayes, Nicholas Sunga, Rakiyah Jackson
 //Includes
 #include <Arduino.h>
 #include <Stepper.h>
@@ -14,7 +14,7 @@
 
 //UART
  #define RDA 0x80 // receives data
- #define TBE 0x20  //transmit Buffer empty flag
+ #define TBE 0x20 
  volatile unsigned char *myUCSR0A = (unsigned char *)0x00C0;
  volatile unsigned char *myUCSR0B = (unsigned char *)0x00C1;
  volatile unsigned char *myUCSR0C = (unsigned char *)0x00C2;
@@ -52,12 +52,9 @@ RTC_DS1307 rtc;
 void adc_init();
 uint16_t adc_read(uint8_t channel);
 
-
-
 enum State { DISABLED, RUNNING, ERROR, IDLE };
 volatile State current = DISABLED;
 State prevState = DISABLED;
-
 
 //ISR
 void startISR(){
@@ -151,7 +148,7 @@ void U0init(unsigned long U0baud)
  *myUCSR0C = 0x06;
  *myUBRR0  = tbaud;
 }
-//
+//CODE FROM UART LAB
 // Read USART0 RDA status bit and return non-zero true if set
 //
 unsigned char U0kbhit(void)
