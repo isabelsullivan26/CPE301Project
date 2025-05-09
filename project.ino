@@ -126,11 +126,11 @@ void loop(){
     logState();
     if (current != DISABLED) {
       if (!(PIND & (1 << VENT_LEFT))) {
-        ventStepper.step(-50);
+        ventStepper.step(-10);
         event("Vent left");
       }
       if (!(PIND & (1 << VENT_RIGHT))) {
-        ventStepper.step(50);
+        ventStepper.step(10);
         event("Vent right");
       }
   }
