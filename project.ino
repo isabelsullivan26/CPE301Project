@@ -9,8 +9,8 @@
 
 
 //VENTS
-#define VENT_LEFT PD4
-#define VENT_RIGHT PD5
+#define VENT_LEFT 15
+#define VENT_RIGHT 16
 
 //UART
  #define RDA 0x80 // receives data
@@ -29,21 +29,23 @@ unsigned const long interval = 60000;
 #define WATER_THRESHOLD 200
 #define TEMP_THRESHOLD_HIGH 30
 #define TEMP_THRESHOLD_LOW 25
-#define DHT_PIN 22
+#define DHT_PIN 2
 #define DHT_TYPE DHT11
 
-#define YELLOW_LED PB0
-#define GREEN_LED PB1
-#define BLUE_LED PB2
-#define RED_LED PB3
-#define FAN_PIN PB4
-#define START_BUTTON PD3
-#define STOP_BUTTON PD2
-#define RESET_BUTTON PD1
+#define YELLOW_LED 10
+#define GREEN_LED 11
+#define BLUE_LED 12
+#define RED_LED 13
+#define FAN_PIN 14
+#define START_BUTTON 7
+#define STOP_BUTTON 8
+#define RESET_BUTTON 9
 
-Stepper ventStepper(2048, 8, 10, 9, 11);
-LiquidCrystal lcd(7,6,5,4,3,2);
+Stepper ventStepper(2048, 3, 4, 5, 6);
+LiquidCrystal lcd(A2,A3,A4,A5,A6,A7);
 DHT dht(DHT_PIN, DHT_TYPE);
+#define SDA_PIN 20
+#define SCL_PIN 21
 RTC_DS1307 rtc;
 
 //ADC and UART
