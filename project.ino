@@ -1,5 +1,5 @@
 //CPE301 Final Project
-//Isabel Sullivan, Ashton Hayes, Nicholas Sunga, Rakiyah Jackson
+//Isabel Sullivan, Ashton Hayes, Nik Sunga, Rakiyah Jackson
 //Includes
 #include <Arduino.h>
 #include <Stepper.h>
